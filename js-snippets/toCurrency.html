@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>To Currency Demo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <script>
+    /*
+      CSS: Snippet for Spinner
+      Follow us @jstipsntricks
+    */
+    const toCurrencyByLocale = (n, curr, LanguageFormat = undefined) =>
+    Intl.NumberFormat(LanguageFormat, { style: 'currency', currency: curr }).format(n);
+  
+    toCurrencyByLocale(123456.789, 'EUR'); // €123,456.79  | currency: Euro | currencyLangFormat: Local
+    toCurrencyByLocale(123456.789, 'USD', 'en-us'); // $123,456.79  | currency: US Dollar | currencyLangFormat: English (United States)
+    toCurrencyByLocale(123456.789, 'USD', 'fa'); // ۱۲۳٬۴۵۶٫۷۹ ؜$ | currency: US Dollar | currencyLangFormat: Farsi
+    toCurrencyByLocale(322342436423.2435, 'JPY'); // ¥322,342,436,423 | currency: Japanese Yen | currencyLangFormat: Local
+    toCurrencyByLocale(322342436423.2435, 'JPY', 'fi'); // 322 342 436 423 ¥ | currency: Japanese Yen | currencyLangFormat: Finnish
+    console.log(toCurrencyByLocale(322342436423.2435, 'INR', 'in'));
+  </script>
+</body>
+</html>
