@@ -92,11 +92,22 @@
         .link{
             color: #b3b8cd;
         }
+     .footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #253745;
+   color: white;
+   text-align: center;
+}
     </style>
 </head>
 
 <body>
-    <div class="container">
+ <div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v10.0&appId=4142743639120613&autoLogAppEvents=1" nonce="KBFQYlbZ"></script>
+ <div class="container">
         <div class="cover-photo">
             <img src="./doggies.jpg" class="profile">
         </div>
@@ -111,6 +122,8 @@
 <!--             <a href="https://twitter.com/CodeMarathon" target="_blank" class="link"><i class="fab fa-twitter"></i></a> -->
         </div>
     </div>
-   
+   <div class="footer">
+  <div class="fb-like" data-href="https://codecracker.netlify.app/" data-width="" data-layout="standard" data-action="like" data-size="small" data-share="false"></div>
+</div>
 </body>
 </html>
